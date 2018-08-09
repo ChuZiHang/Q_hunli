@@ -1,0 +1,15 @@
+/* pages/user/authorize.wxss */
+.authorizeTips{
+  padding: 50px;
+  text-align: center;
+  font-size:14px;
+}
+.authorizeBtn{
+  background: #009de3;
+  color:#fff;
+  width: 80%;
+  margin: 0 auto;
+  font-size:14px;
+  line-height: 42px;
+  height: 42px;
+}

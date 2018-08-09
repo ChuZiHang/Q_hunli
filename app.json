@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/map/index",
+    "pages/bless/index",
+    "pages/chat/index",
+    "pages/photos/index",
+    "pages/authorize/authorize"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#009de4",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "邀请函",
+        "iconPath": "images/1.png",
+        "selectedIconPath": "images/1.png"
+      },
+      {
+        "pagePath": "pages/photos/index",
+        "text": "甜蜜相册",
+        "iconPath": "images/2.png",
+        "selectedIconPath": "images/2.png"
+      },
+      {
+        "pagePath": "pages/map/index",
+        "text": "酒店导航",
+        "iconPath": "images/3.png",
+        "selectedIconPath": "images/3.png"
+      },
+      {
+        "pagePath": "pages/bless/index",
+        "text": "好友祝福",
+        "iconPath": "images/4.png",
+        "selectedIconPath": "images/4.png"
+      },
+      {
+        "pagePath": "pages/chat/index",
+        "text": "留言评论",
+        "iconPath": "images/5.png",
+        "selectedIconPath": "images/5.png"
+      }
+    ]
+  }
+}

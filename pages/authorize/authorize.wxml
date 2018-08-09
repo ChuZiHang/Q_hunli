@@ -1,0 +1,7 @@
+
+<view class='authorizeTips'>
+您需要手动授权后方可使用
+</view>
+<view class='authorize'>
+  <button open-type="getUserInfo" bindgetuserinfo="userInfoHandler" class='authorizeBtn'>立刻授权</button>
+</view>
