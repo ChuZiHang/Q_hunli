@@ -35,8 +35,9 @@ App({
                   }).then(response => {
                     console.log('response6666666666666', response)
                     wx.setStorageSync('openId', response.data.openId)
-                    wx.setStorageSync('Authorization', response.data.token)
-                    
+                    wx.reLaunch({
+                      url: '/pages/index/index',
+                    });
                   }).catch(error => {
                     console.log(error)
                   })

@@ -34,6 +34,10 @@ Page({
         weddingLunar: response.data.weddingLunar,
         address: response.data.address
       })
+
+      var imgs = response.data.imgs;
+      var imgUrls = imgs.split(',')
+
       wx.setStorage({
         key: "brideName",
         data: response.data.brideName
@@ -53,7 +57,7 @@ Page({
       
       wx.setStorage({
         key: "imgs",
-        data: response.data.imgs
+        data: imgUrls
       })
       wx.setStorage({
         key: "lon",
@@ -108,30 +112,6 @@ Page({
         })
       }
     })
-
-    // wx.request({
-    //   url: server,
-    //   method: 'GET',
-    //   data: { 'c': 'info', 'appid': appid },
-    //   header: {
-    //     'Accept': 'application/json'
-    //   },
-    //   success: function (res) {
-    //     //console.log(res.data)
-
-    //     wx.playBackgroundAudio({
-    //       dataUrl: res.data.music_url,
-    //       title: '',
-    //       coverImgUrl: ''
-    //     })
-
-
-    //     that.setData({
-    //       mainInfo: res.data.mainInfo,
-    //       music_url: res.data.music_url
-    //     });
-    //   }
-    // })
   },
 
   /**

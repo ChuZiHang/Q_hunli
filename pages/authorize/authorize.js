@@ -10,6 +10,7 @@ Page({
   },
   userInfoHandler: function (e) {
     console.log(e);
+    console.log("====================================用户授权============================================");
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
@@ -30,9 +31,7 @@ Page({
                     'gender': res.userInfo.gender,
                     'avatarUrl': res.userInfo.avatarUrl
                   }).then(response1 => {
-                    console.log('response6666666666666', response1)
                     wx.setStorageSync('openId', response1.data.openId)
-                    wx.setStorageSync('Authorization', response1.data.token)
                     wx.reLaunch({
                       url: '/pages/index/index',
                     });

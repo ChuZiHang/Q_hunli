@@ -1,30 +1,16 @@
 //index.js
 //获取应用实例
 const app = getApp()
-var server = app.globalData.server;
 var appid = app.globalData.appid;
 Page({
   data: {
     userInfo: {},
-    imgUrls: wx.getStorageSync('imgs').split(","),
-    indicatorDots: false,
-    autoplay: false,
-    interval: 5000,
-    duration: 1000
+    imgUrls: wx.getStorageSync('imgs')
   },
   onLoad: function () {
-    // wx.getStorage({
-    //   key: 'imgs',
-    //   success: function (res) {
-    //     console.log(res)
-    //     var imgs = res.data.split(",")
-        
-    //     this.imgUrls = imgs
-    //     console.log("99999999999999999", imgs)
-    //     console.log("888888888888888878", this.imgUrls)
-    //   }
-    // })
-    // console.log(this.data.imgUrls)
+    // this.data.imgUrls = wx.getStorageSync('imgs').split(",")
+    // console.log("99999999999999999", this.data.imgUrls  )
+    
     
   },
   onReady: function () {

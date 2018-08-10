@@ -39,7 +39,6 @@ function requestFetchLoginPost(apiHost, apiUrl, postData) {
 
 function requestFetchPost(apiHost, apiUrl, postData) {
   return new Promise((resolve, reject) => {
-    var Authorization = wx.getStorageSync('Authorization')
     wx.request({
       url: apiHost + apiUrl,
       method: 'POST',
@@ -47,9 +46,6 @@ function requestFetchPost(apiHost, apiUrl, postData) {
       success: function (res) {
         resolve(res)
         console.log(2)
-      },
-      header: {
-        'Authorization': Authorization
       },
       fail: function (error) {
         reject(error)
@@ -60,13 +56,9 @@ function requestFetchPost(apiHost, apiUrl, postData) {
 
 function requestFetchGet(apiHost, apiUrl, data) {
   return new Promise((resolve, reject) => {
-    var Authorization = wx.getStorageSync('Authorization')
     wx.request({
       url: apiHost + apiUrl,
       method: 'GET',
-      header: {
-        'Authorization': Authorization
-      },
       data: data,
       success: function (res) {
         resolve(res)
@@ -79,7 +71,6 @@ function requestFetchGet(apiHost, apiUrl, data) {
 }
 function requestGet(apiHost, apiUrl, data) {
   return new Promise((resolve, reject) => {
-    var Authorization = wx.getStorageSync('Authorization')
     wx.request({
       url: apiHost + apiUrl,
       method: 'GET',
