@@ -27,5 +27,5 @@
     <map id="map" longitude="{{lon}}" latitude="{{lat}}" scale="18" markers="{{markers}}" bindmarkertap="markertap" show-location ></map>
   </view>
   <view class='copyright' wx:if="{{brideMobile}}">MADE WITH ❤ BY  {{bridegroomName}} & {{brideName}}</view>
-  <view class='copyright'>©2018 见证你们最好的爱情</view>
+  <view class='copyright'>©2018.10.01 见证你们最好的爱情</view>
 </view>

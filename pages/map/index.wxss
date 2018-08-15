@@ -40,7 +40,7 @@
   margin: 20rpx auto;
 }
 .dh-text2-ct view{
-  font-size: 30rpx;
+  font-size: 28rpx;
   line-height: 50rpx;
   letter-spacing: 4rpx;
   color:#828483;

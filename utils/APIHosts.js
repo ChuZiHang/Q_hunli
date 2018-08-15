@@ -8,5 +8,5 @@ function host() {
 
 // 工程接口文件出口
 module.exports = {
-  hostRoot: host
+  hostRoot: hostTest
 }
