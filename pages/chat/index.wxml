@@ -7,7 +7,7 @@
             </view>
             <view class="chat_words">
                 <view class="chat_meta">
-                    <text class="chat_user">{{item.nickname}}</text>
+                    <text class="chat_user">{{item.nickName}}</text>
                     <text class="chat_date">{{item.createDate}}</text>
                 </view>
                 <view>{{item.content}}</view>
