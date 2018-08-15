@@ -96,3 +96,6 @@ page {
     width: 600rpx;
     height: 450rpx;
 }
+.send_msg button {
+  background-color: #E45D93;
+}

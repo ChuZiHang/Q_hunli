@@ -4,18 +4,29 @@
   font-size: 30rpx;
   line-height: 60rpx;
 }
-.friends {
+.friends-container {
+  width: 640rpx;
+  margin-top: 50rpx;
   min-height: 0;
   overflow: hidden;
-  width: 600rpx;
   margin: 0 auto;
-  margin-top: 20rpx;
+  padding: 10rpx 20rpx 30rpx;
+  border: 1px solid #ebebeb;
+  background-color: #e9e9e9; 
+  border-radius: 15rpx;
+}
+.friends {
+  background-color: #fff;
+  margin: 2rpx 15rpx;
+  padding:5rpx 10rpx;
+  height: 500rpx;
+  overflow-y: auto;
 }
 .face {
   width: 100rpx;
   height: 100rpx;
-  float: left;
   margin: 10rpx;
+  display: inline-block;
 }
 .face image {
   width: 100rpx;
@@ -31,10 +42,14 @@
   margin-top: 20rpx;
 }
 .zan {
-  width: 400rpx;
+  display: inline-block;
+}
+.zan button {
+  background-color: #E45D93;
 }
 .share {
-  width: 200rpx;
+  display: inline-block;
+  float: right;
 }
 .bless_img {
   width: 400rpx;
@@ -52,4 +67,8 @@
   margin-top: 20rpx;
   margin-bottom: 20rpx;
   color: #ccc;
+}
+button {
+  font-size: 30rpx;
+  width: 300rpx;
 }

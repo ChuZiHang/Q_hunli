@@ -21,32 +21,32 @@
       {
         "pagePath": "pages/index/index",
         "text": "邀请函",
-        "iconPath": "images/1.png",
-        "selectedIconPath": "images/1.png"
+        "iconPath": "images//yqh-mr.png",
+        "selectedIconPath": "images/yqh-hd.png"
       },
       {
         "pagePath": "pages/photos/index",
         "text": "甜蜜相册",
-        "iconPath": "images/2.png",
-        "selectedIconPath": "images/2.png"
+        "iconPath": "images/xc-mr.png",
+        "selectedIconPath": "images/xc-hd.png"
       },
       {
         "pagePath": "pages/map/index",
         "text": "酒店导航",
-        "iconPath": "images/3.png",
-        "selectedIconPath": "images/3.png"
+        "iconPath": "images/dh-mr.png",
+        "selectedIconPath": "images/dh-hd.png"
       },
       {
         "pagePath": "pages/bless/index",
         "text": "好友祝福",
-        "iconPath": "images/4.png",
-        "selectedIconPath": "images/4.png"
+        "iconPath": "images/zf-mr.png",
+        "selectedIconPath": "images/zf-hd.png"
       },
       {
         "pagePath": "pages/chat/index",
         "text": "留言评论",
-        "iconPath": "images/5.png",
-        "selectedIconPath": "images/5.png"
+        "iconPath": "images/pl-mr.png",
+        "selectedIconPath": "images/pl-hd.png"
       }
     ]
   }

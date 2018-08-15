@@ -1,9 +1,14 @@
 <!--pages/map/index.wxml-->
 <view class="container">
-  <image src='/images/t1.png' class='t1'></image>
-  <view class="map">
-    <map id="map" longitude="{{lon}}" latitude="{{lat}}" scale="18" markers="{{markers}}" bindmarkertap="markertap" show-location ></map>
+  <!-- <image src='/images/dh-text1.png' class='t1'></image> -->
+  <!-- <image src='/images/dh-text2.png' class='t1 t2'></image>  -->
+  <!-- <image src='/images/dh-eng.png' class='t1 t3'></image> -->
+  <view class='dh-text1'>恭候光临 嘉礼初成</view>
+  <view class='dh-text2-ct'>
+    <view>佳人佳偶逢佳期 君至可添喜</view>
+    <view>亲友亲事话亲情 您来能增辉</view>
   </view>
+  <view class='dh-text3'>Storyook endings.Fairy tales coming true.</view>
   <view class="tel">
     <view class="tel_he" wx:if="{{bridegroomMobile}}">
       <view class="call" bindtap="callhe">
@@ -17,6 +22,9 @@
       </view>
       呼叫新娘
     </view>
+  </view>
+    <view class="map">
+    <map id="map" longitude="{{lon}}" latitude="{{lat}}" scale="18" markers="{{markers}}" bindmarkertap="markertap" show-location ></map>
   </view>
   <view class='copyright' wx:if="{{brideMobile}}">MADE WITH ❤ BY  {{bridegroomName}} & {{brideName}}</view>
   <view class='copyright'>©2018 见证你们最好的爱情</view>
