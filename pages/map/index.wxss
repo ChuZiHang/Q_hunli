@@ -4,7 +4,6 @@
   background: url('http://oq8pu5sju.bkt.clouddn.com/bg2.jpg') no-repeat center;
   background-size: cover;
   padding: 5rpx 30rpx 0;
-  /* text-align: center; */
 }
 
 /*.t1 {
