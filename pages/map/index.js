@@ -1,4 +1,7 @@
 const app = getApp()
+var apiHost = require('../../utils/APIHosts.js')
+var apiUrls = require('../../utils/APIURLs.js')
+var fetch = require('../../utils/Fetch.js')
 var appid = app.globalData.appid;
 Page({
 
@@ -10,17 +13,17 @@ Page({
     mainInfo:{
       he_tel:''
     },
-    brideName: wx.getStorageSync('brideName'),
-    brideMobile: wx.getStorageSync('brideMobile'),
-    bridegroomMobile: wx.getStorageSync('bridegroomMobile'),
-    bridegroomName: wx.getStorageSync('bridegroomName'),
-    lon: wx.getStorageSync('lon'),
-    lat: wx.getStorageSync('lat'),
+    brideName: '',
+    brideMobile: '',
+    bridegroomMobile: '',
+    bridegroomName: '',
+    lon: 0,
+    lat: 0,
     markers: [{
       iconPath: "/images/nav.png",
       id: 0,
-      latitude: wx.getStorageSync('lat'), // 页面初始化 options为页面跳转所带来的参数 
-      longitude: wx.getStorageSync('lon'),
+      latitude: 38.015866, // 页面初始化 options为页面跳转所带来的参数 
+      longitude: 114.04504,
       width: 50,
       height: 50
     }]
@@ -29,13 +32,32 @@ Page({
     // console.log(e)
     
     wx.openLocation({
-      latitude: parseFloat(wx.getStorageSync('lat')),
-      longitude: parseFloat(wx.getStorageSync('lon')),
+      latitude: parseFloat(38.015866),
+      longitude: parseFloat(114.04504),
       scale: 18,
       name: '石桥头',
       address: '石桥头'
     })
       
+  },
+
+  // 获取婚礼详情
+  indexGetWedding: function () {
+    var appId = 1
+    fetch.requestFetchGet(apiHost.hostRoot(), apiUrls.getWedding(appId), {
+    }).then(response => {
+      console.log('婚礼地图', response)
+      this.setData({
+        brideName: response.data.brideName,
+        bridegroomName: response.data.bridegroomName,
+        brideMobile: response.data.brideMobile,
+        bridegroomMobile: response.data.bridegroomMobile,
+        lon: response.data.lon,
+        lat: response.data.lat,
+      })
+    }).catch(error => {
+      console.log(error)
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -49,7 +71,8 @@ Page({
           userInfo: res.userInfo
         })
       }
-    })    
+    })
+    that.indexGetWedding()    
   },
 
   /**

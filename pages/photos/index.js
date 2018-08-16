@@ -1,17 +1,37 @@
 //index.js
 //获取应用实例
 const app = getApp()
+var apiHost = require('../../utils/APIHosts.js')
+var apiUrls = require('../../utils/APIURLs.js')
+var fetch = require('../../utils/Fetch.js')
 var appid = app.globalData.appid;
 Page({
   data: {
     userInfo: {},
-    imgUrls: wx.getStorageSync('imgs')
+    imgUrls: []
+  },
+  // 获取婚礼详情
+  indexGetWedding: function () {
+    var appId = 1
+    fetch.requestFetchGet(apiHost.hostRoot(), apiUrls.getWedding(appId), {
+    }).then(response => {
+      console.log('婚礼照片', response)
+      
+
+      var imgs = response.data.imgs;
+      var images = imgs.split(',')
+
+      this.setData({
+        imgUrls: images
+      })
+
+
+    }).catch(error => {
+      console.log(error)
+    })
   },
   onLoad: function () {
-    // this.data.imgUrls = wx.getStorageSync('imgs').split(",")
-    // console.log("99999999999999999", this.data.imgUrls  )
-    
-    
+    this.indexGetWedding()
   },
   onReady: function () {
     // 页面渲染完成

@@ -5,7 +5,7 @@
   font-size:14px;
 }
 .authorizeBtn{
-  background: #009de3;
+  background: #e30057;
   color:#fff;
   width: 80%;
   margin: 0 auto;
